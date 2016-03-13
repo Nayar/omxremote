@@ -75,6 +75,15 @@ app.post('/file/:name/subs', function(req, res) {
     res.sendStatus(200);
 });
 
+app.post('/file/:name/louder', function(req, res) {
+    omx.louder();
+    res.sendStatus(200);
+});
+
+app.post('/file/:name/softer', function(req, res) {
+    omx.softer();
+    res.sendStatus(200);
+});
 
 app.listen(31415);
 
